@@ -120,10 +120,45 @@
         </section>
 
         <footer>
-            <div class="container">
+            <div class="container footer">
                 <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-2"></div>
+                    <div class="col-md-3">
+                        <img src="../../assets/footerlogo.png" class="img-fluid" alt=""> 
+                        <p class="footertxt">Copyright © 2023 Eazipay. <br> All rights reserved</p> 
+                        <div class="d-flex flex-row links">
+                            <img class="quicklinks" src="../../assets/ig.png" alt="">
+                            <img class="quicklinks" src="../../assets/twitter.png" alt="">
+                            <img class="quicklinks" src="../../assets/linkedin.png" alt="">
+                            <img class="quicklinks" src="../../assets/fb.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <h6 class="headertxt">Product</h6>
+                        <p class="subtxt">Indidual</p>
+                        <p class="subtxt">Businesses</p>
+                        <p class="subtxt">Request Demo</p>
+                        <p class="subtxt">Pricing</p>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="headertxt">Legal</h6>
+                        <p class="subtxt">Privacy Policy</p>
+                        <p class="subtxt">Terms of Service</p>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="headertxt">Resources</h6>
+                        <p class="subtxt">FAQs</p>
+                        <p class="subtxt">Blog</p>
+                        <p class="subtxt">Career</p>
+                        <p class="subtxt">Customer Stories</p>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="headertxt">Contact us</h6>
+                        <p class="subtxt">eazipay@gmail.com</p>
+                        <p class="subtxt">+234 816 878 9518</p>
+                        <input type="text" placeholder="Your email address" class="foteerinput">
+                        <i class="bi bi-send icon"></i>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -268,5 +303,59 @@ h1{
     font-weight: 600;
     font-size: 65px;
     /* color: #EA4E4B; */
+}
+.footertxt{
+    color: #515251;
+    font-size: 15px;
+    padding-top: 50px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+}
+.links{
+    padding-top: 30px;
+}
+.quicklinks {
+    padding-right:20px ;
+}
+.footer {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+footer {
+    border-top: 1px solid #EAEAEA;
+    background: var(--new-styles-shades-white, #FFF);
+}
+.headertxt{
+    color: var(--new-styles-text-heading, #292A29);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 120% */
+    letter-spacing: 0.2px;
+}
+.subtxt{
+    color: #7C7C7C;
+    padding-top: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.foteerinput{
+    border-radius: 50px;
+    background: var(--new-styles-grays-bg, #F2F1F1);
+    width: 255px;
+    height: 50px;
+    padding: 20px;
+    flex-shrink: 0;
+    border: none;
+    margin-top: 20px;
+}
+.icon{
+    position: absolute;
+    top: 164px;
+    right: -50px;
+    font-size: 20px;
+    color: #515251;
 }
 </style>
