@@ -106,10 +106,7 @@
       </nav>
 
       <div class="cd-content-wrapper">
-        <div class="text-component text-center">
-          <h1>Responsive Sidebar Navigation</h1>
-          <p>👈<a href="https://codyhouse.co/gem/responsive-sidebar-navigation">Article &amp; Download</a></p>
-        </div>
+        <slot></slot>
       </div> <!-- .content-wrapper -->
     </main>
   </div>
