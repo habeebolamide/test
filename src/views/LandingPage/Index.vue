@@ -53,7 +53,7 @@
             <div style="padding-top: 10rem;">
                 <h1>For Individuals and Businesses</h1>
                 <p class=" text-dark">Join 200+ businesses using Eazipay's easy solution.</p>
-                <div class="d-flex flex-row container test">
+                <div class="d-flex flex-row container test mt-5 mb-5">
                     <div class="slide">
                         <h5>Tamper-proof Payroll for LIfe</h5>
                         <p>Your staff payroll history is kept in one place forever.</p>
@@ -72,6 +72,7 @@
                         <p>Payment is done permanently.</p>
                     </div>
                 </div>
+                <p class="py-5 text-dark">We are happy to answer your queries. Please, reach us at <br> <span style="color: #EA4E4B;"> hello@myeazipay.com </span> and expect our response shortly after.</p>
             </div>
         </section>
     </div>
