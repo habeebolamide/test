@@ -75,6 +75,30 @@
                 <p class="py-5 text-dark">We are happy to answer your queries. Please, reach us at <br> <span style="color: #EA4E4B;"> hello@myeazipay.com </span> and expect our response shortly after.</p>
             </div>
         </section>
+        <section class="how-it-works">
+            <h1>How Eazipay Works</h1>
+            <p class="hiwtext">Get started in 3 simple steps.</p>
+            <div class="container">
+                <div class="row" style="margin-top: 200px;">
+                    <div class="col-md-6 bg">
+                        <img class="img-fluid pos"  src="../../assets/phone.png" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid process" src="../../assets/hiwimg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="payment">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-md-6">
+                        <h1 class="paymenttxt">Free forever <br> for your <span>salary <br> payment</span></h1>
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -164,7 +188,7 @@ h1{
     box-shadow: -11px 0px 19px 0px rgba(23, 23, 23, 0.30), 0px 13px 20px 0px rgba(23, 23, 23, 0.20);
     text-align: initial;
 }
-.slide h5 ,p{
+.slide h5,p{
     color: white;
 }
 .slide h5{
@@ -177,5 +201,44 @@ h1{
 }
 .left{
     margin-left: -295px;
+}
+.how-it-works h1{
+    color: #11453B;
+    text-align: center;
+    font-family: 'made-mellow-personal-use-2';
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 64px;
+}
+.hiwtext{
+    color: var(--new-styles-text-body-dark, #515251);
+    text-align: center;
+    font-size: 20px;
+}
+.bg{
+    background: url('../../assets/BG.png');
+    background-repeat: no-repeat;
+}
+.process{
+    width: 70% !important;
+    position: absolute;
+    right: 0px;
+}
+.pos{
+    position: relative;
+    right: -92px;
+    bottom: 50px;
+}
+.payment{
+    background: url('../../assets/Intersect.png');
+}
+.paymenttxt span{
+    color: #EA4E4B;
+}
+.paymenttxt{
+    font-weight: 600;
+    font-size: 65px;
+    /* color: #EA4E4B; */
 }
 </style>
