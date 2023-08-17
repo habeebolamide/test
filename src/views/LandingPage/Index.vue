@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="overflow-x: hidden;">
         <section class=" header">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -27,7 +27,7 @@
                         </ul>
                         <div class=" my-2 my-lg-0">
                             <button class="btn login">Login</button>
-                            <button class="btn register ml-5">Register</button>
+                            <button class="btn register">Register</button>
                         </div>
                     </div>
                 </nav>
@@ -84,11 +84,11 @@
             <h1>How Eazipay Works</h1>
             <p class="hiwtext">Get started in 3 simple steps.</p>
             <div class="container">
-                <div class="row" style="margin-top: 200px;">
-                    <div class="col-md-6 bg">
+                <div class="row adjust" style="margin-top: 200px;">
+                    <div class="col-6 bg">
                         <img class="img-fluid pos" src="../../assets/phone.png" alt="">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <img class="img-fluid process" src="../../assets/hiwimg.png" alt="">
                     </div>
                 </div>
@@ -193,7 +193,6 @@
                 </div>
             </div>
         </section>
-
         <footer>
             <div class="container footer">
                 <div class="row">
@@ -305,7 +304,7 @@ export default {
     align-items: center;
     gap: 8px;
     border-radius: 24px;
-    border: 1px solid var(--new-styles-primary-eazi-green, #11453B);
+    border: 1px solid  #11453B;
 }
 
 .register {
@@ -315,9 +314,10 @@ export default {
     align-items: center;
     gap: 8px;
     border-radius: 24px;
-    background: var(--new-styles-primary-eazi-green, #11453B);
+    background:  #11453B;
     box-shadow: 0px 8px 16px 0px rgba(17, 69, 59, 0.20);
     color: white;
+    margin-left: 3rem;
 }
 
 h1 {
@@ -566,5 +566,49 @@ footer {
     background: #11453B;
     color: white;
     padding: 12px 28px;
+}
+@media screen and (max-width: 768px) {
+    .register{
+        width: 158px;
+        margin-left: 11px;
+        padding: 10px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 24px;
+        border: 1px solid  #11453B;
+    }
+    .login{
+        width: 138px;
+        padding: 10px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 24px;
+        border: 1px solid  #11453B;
+    }
+    .pos{
+        width: 50%;
+        left: 39px;
+        top: 7px;
+    }
+    .bg{
+        background-size: cover;
+    }
+    .adjust{
+        margin-top: 70px !important;
+        margin-bottom: 70px;
+    }
+    .nav-tabs .nav-link.active{
+        width: 100px;
+        padding: 8px 30px;
+    }
+    .nav-tabs .nav-link{
+        width: 100px;
+        padding: 8px 30px;
+    }
+    .foteerinput{
+        width: 181px;
+    }
 }
 </style>
