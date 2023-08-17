@@ -1,10 +1,18 @@
 <template>
     <div>
-        <h1>HelloWorldVue</h1>
-        p
+        <Sidebar/>
     </div>
 </template>
 
-<script>
 
+<style></style>
+
+<script>
+    import Sidebar from './partials/Sidebar.vue';
+    export default {
+        name:"DashBoard",
+        components:{
+            Sidebar
+        }
+    }
 </script>
