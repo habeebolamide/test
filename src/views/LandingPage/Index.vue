@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section>
-        <section class="payment">
+        <section class="payment mt-3">
             <img style="margin-left: 200px;" src="../../assets/pattern.png" alt="">
             <div class="container">
                 <div class="row py-5">
@@ -109,6 +109,24 @@
                 </div>
             </div>
         </section>
+        <section class="form">
+            <img style="margin-top: 100px;" src="../../assets/pattern2.png" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </footer>
     </div>
 </template>
 
