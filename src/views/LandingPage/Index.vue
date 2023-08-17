@@ -25,8 +25,8 @@
                         </li>
                     </ul>
                     <div class=" my-2 my-lg-0">
-                            <button class="btn login">Login</button>
-                            <button class="btn register ml-5">Register</button>
+                        <button class="btn login">Login</button>
+                        <button class="btn register ml-5">Register</button>
                     </div>
                 </div>
             </nav>
@@ -36,7 +36,7 @@
                     <p class="text-muted pt-3">We’ve built an all-inclusive simple solution for individual and businesses to manage staff, pay salaries, bills, and relevant taxes all at once.</p>
                     <button class="btn freebtn">Start Using Free, Forever</button>
                     <div class="download-section">
-                        <p>Download the Eazipay App</p>
+                        <p class="text-dark">Download the Eazipay App</p>
                         <div class="d-flex flex-row">
                             <img src="../../assets/appstore.png" alt="" class="img-fluid app">
                             <img src="../../assets/playstore.png" alt="" class="img-fluid app">
@@ -90,12 +90,22 @@
             </div>
         </section>
         <section class="payment">
+            <img style="margin-left: 200px;" src="../../assets/pattern.png" alt="">
             <div class="container">
                 <div class="row py-5">
                     <div class="col-md-6">
                         <h1 class="paymenttxt">Free forever <br> for your <span>salary <br> payment</span></h1>
+                        <div class="download-section">
+                        <p class="text-dark">Download the Eazipay App</p>
+                        <div class="d-flex flex-row">
+                            <img src="../../assets/appstore.png" alt="" class="img-fluid app">
+                            <img src="../../assets/playstore.png" alt="" class="img-fluid app">
+                        </div>
                     </div>
-                    <div class="col-md-6"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../../assets/sideimg.png" alt="" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </section>
