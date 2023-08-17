@@ -52,13 +52,25 @@
         <section class="info">
             <div style="padding-top: 10rem;">
                 <h1>For Individuals and Businesses</h1>
-                <p>Join 200+ businesses using Eazipay's easy solution.</p>
-                <div class="d-flex flex-row container">
+                <p class=" text-dark">Join 200+ businesses using Eazipay's easy solution.</p>
+                <div class="d-flex flex-row container test">
                     <div class="slide">
                         <h5>Tamper-proof Payroll for LIfe</h5>
+                        <p>Your staff payroll history is kept in one place forever.</p>
+                        <p>No more excel sheet or manual records.</p>
+                        <p>Download your payroll history anytime you need it.</p>
                     </div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
+                    <div class="slide left">
+                        <h5>All Payroll, Anytime Anywhere</h5>
+                        <p>Wherever you are Eazipay has got you covered on ALL your Payroll tasks.</p>
+                        <p>Whether it is Taxes, Pension insurances HMOs, trustfunds, Eazipay handle all your compliamces in one place and easily, in seconds!</p>
+                    </div>
+                    <div class="slide left">
+                        <h5>Payroll in Seconds</h5>
+                        <p>Never again wil you spend more than 2 minutes on payroll.</p>
+                        <p>Just click on your staff annd bulk-pay them at once.</p>
+                        <p>Payment is done permanently.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -93,7 +105,7 @@ export default {
     border: 1px solid var(--new-styles-primary-eazi-green, #11453B);
 }
 .register{
-    width: 168px;
+    width: 150px;
     padding: 10px 32px;
     justify-content: center;
     align-items: center;
@@ -144,17 +156,25 @@ h1{
     font-weight: 600;
 }
 .slide{
-    display: flex;
     width: 552px;
-    padding: 64px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    padding: 35px;
     border-radius: 16px;
     background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(217, 235, 205, 0.14) 0%, rgba(217, 235, 205, 0.03) 100%), #11453B;
     box-shadow: -11px 0px 19px 0px rgba(23, 23, 23, 0.30), 0px 13px 20px 0px rgba(23, 23, 23, 0.20);
+    text-align: initial;
 }
-.slide h5 {
+.slide h5 ,p{
     color: white;
+}
+.slide h5{
+   font-size: 28px;
+}
+.slide p {
+    font-size: 17px;
+    font-weight: 300;
+    padding-top: 10px;
+}
+.left{
+    margin-left: -295px;
 }
 </style>
