@@ -419,6 +419,7 @@ export default {
   },
   methods:{
     toggleSidebar(){
+
       if (document.getElementById('body').classList.contains("toggle-sidebar")) {
         document.getElementById("header").style.width = '80%';
         document.getElementById("header").style.marginLeft = '302px';
@@ -429,6 +430,7 @@ export default {
         document.getElementById("header").style.width = '100%';
         document.getElementById("header").style.marginLeft = '0px';
       }
+      
     }
   },
   mounted(){
