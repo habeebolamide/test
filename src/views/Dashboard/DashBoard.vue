@@ -624,6 +624,8 @@
 
 <!-- <script src="assets/vendor/apexcharts/apexcharts.min.js"></script> -->
 <script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../../../assets/js/main.js"></script>
+
 <script>
 import Sidebar from './partials/Sidebar.vue';
 import ApexCharts from 'apexcharts';

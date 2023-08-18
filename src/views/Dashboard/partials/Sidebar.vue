@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="t" id="body">
     <header id="header" class="header fixed-top d-flex align-items-center">
 
       <div class="d-flex align-items-center justify-content-between">
-        <i class="bi bi-list toggle-sidebar-btn"></i>
+        <i class="bi bi-list toggle-sidebar-btn" @click="click()"></i>
         <img src="../../../assets/logo2.png" class="img-fluid px-5" alt="">
       </div><!-- End Logo -->
 
@@ -91,7 +91,7 @@
 
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
               <img src="../../../assets/profile-img.png" alt="Profile" class="rounded-circle">
-              <span class="d-none d-md-block ps-2">Kulu Abasiama</span> <br> 
+              <span class="d-none d-md-block ps-2">Kulu Abasiama</span> <br>
               <!-- <small style="display: block !important;">Admin</small> -->
             </a><!-- End Profile Iamge Icon -->
 
@@ -169,7 +169,8 @@
 
         <li class="nav-item">
           <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-menu-button-wide"></i><span>Employee Management</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-menu-button-wide"></i><span>Employee Management</span><i
+              class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
@@ -275,7 +276,8 @@
 
         <li class="nav-item">
           <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-layout-text-window-reverse"></i><span>Compliance</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-layout-text-window-reverse"></i><span>Compliance</span><i
+              class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
@@ -377,8 +379,6 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
-import isScreen from '../core/screenHelper';
 export default {
   name: 'SideBar',
   data() {
@@ -404,62 +404,18 @@ export default {
     };
   },
   methods: {
-    ...mapActions('layout', ['changeSidebarActive', 'switchSidebar']),
-    setActiveByRoute() {
-      const paths = this.$route.fullPath.split('/');
-      paths.pop();
-      this.changeSidebarActive(paths.join('/'));
-    },
-    sidebarMouseEnter() {
-      if (!this.sidebarStatic && (isScreen('lg') || isScreen('xl'))) {
-        this.switchSidebar(false);
-        this.setActiveByRoute();
-      }
-    },
-    sidebarMouseLeave() {
-      if (!this.sidebarStatic && (isScreen('lg') || isScreen('xl'))) {
-        this.switchSidebar(true);
-        this.changeSidebarActive(null);
-      }
-    },
+    click() {
+      document.getElementById('body').classList.toggle('toggle-sidebar');
 
-    getUserType() {
-      const auth_user = JSON.parse(localStorage.getItem('auth_user')) || null;
-      if (auth_user) {
-        this.user_type_hash = auth_user.user_typehash;
-        this.$api
-          .get(this.dynamic_route('user'),
-            {
-            })
-          .then(res => {
-            this.authType = res.data.user_type;
-          })
-          .catch(err => {
-            if (err.response.status == 401 && err.response.data.message == "Unauthenticated.") {
-              return this.logoutUser();
-
-            }
-          })
-          .finally(() => {
-            this.loading = false
-          });
-
-      }
     },
   },
+
   created() {
-    this.setActiveByRoute();
-    // this.getSidebarCont()
   },
   mounted() {
-
+    // this.setupSidebarToggle();
   },
   computed: {
-    ...mapState('layout', {
-      sidebarStatic: state => state.sidebarStatic,
-      sidebarOpened: state => !state.sidebarClose,
-      activeItem: state => state.sidebarActiveElement,
-    }),
   },
 };
 </script>
@@ -467,7 +423,6 @@ export default {
 
 <!-- Sidebar styles should be scoped -->
 <!-- <style src="./Sidebar.scss" lang="scss" scoped/> -->
-<style src="./Sidebar.scss" lang="scss" scoped></style>
 <style src="../../../assets/css/styles.css" scoped></style>
 <!-- <script src="../../../assets/js/main.js"></script> -->
 
@@ -482,3 +437,4 @@ export default {
   margin: 0px;
 }
 </style>
+
