@@ -1,18 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Landing from '../views/LandingPage/Index.vue'
-import Dashboard from '../views/Dashboard/Index.vue'
+import Landing from '../views/LandingPage/LandingPage.vue'
+import Dashboard from '../views/Dashboard/DashBoard.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/dashboard',
+    path: '/',
     name: 'home',
     component: Landing
   },
   {
-    path: '/',
+    path: '/dashboard',
     name: 'dashboard',
     component: Dashboard
   },

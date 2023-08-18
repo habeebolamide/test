@@ -463,6 +463,7 @@ export default {
   },
 };
 </script>
+<script src="../../../assets/js/main.js"></script>
 
 <!-- Sidebar styles should be scoped -->
 <!-- <style src="./Sidebar.scss" lang="scss" scoped/> -->

@@ -603,6 +603,23 @@
     background: #FFF;
     color: #8D8E8D;
 }
+@media screen and (max-width: 768px) {
+    .in{
+        font-size: 15px;
+    }
+    .out{
+        font-size: 15px;
+    }
+    .search-wrapper input{
+        width: auto;
+    }
+    .overall{
+        width: 100%;
+    }
+    .heading{
+        width: 100%;
+    }
+}
 </style>
 
 <!-- <script src="assets/vendor/apexcharts/apexcharts.min.js"></script> -->
