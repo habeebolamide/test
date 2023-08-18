@@ -419,8 +419,16 @@ export default {
   },
   methods:{
     toggleSidebar(){
-      document.getElementById('body').classList.toggle('toggle-sidebar');
-      // document.getElem
+      if (document.getElementById('body').classList.contains("toggle-sidebar")) {
+        document.getElementById("header").style.width = '80%';
+        document.getElementById("header").style.marginLeft = '302px';
+        document.getElementById('body').classList.toggle('toggle-sidebar');
+      }
+      else {
+        document.getElementById('body').classList.toggle('toggle-sidebar');
+        document.getElementById("header").style.width = '100%';
+        document.getElementById("header").style.marginLeft = '0px';
+      }
     }
   },
   mounted(){
