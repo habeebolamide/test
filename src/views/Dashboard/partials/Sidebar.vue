@@ -370,7 +370,7 @@
       </ul>
 
     </aside>
-    <main id="main" class="main">
+    <main id="main" class="main" style="background: #F9FAFC;">
       <slot></slot>
     </main>
   </div>
@@ -379,10 +379,8 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import isScreen from '../core/screenHelper';
-import NavLink from './NavLink/NavLink';
 export default {
   name: 'SideBar',
-  components: { NavLink },
   data() {
     return {
       authType: '',
