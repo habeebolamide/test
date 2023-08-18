@@ -1,6 +1,9 @@
 <template>
     <div>
-        <Sidebar/>
+        <Sidebar>
+            <h1>Welcome  Abasiama</h1>
+            <p>Pay and manage your employee in minutes</p>
+        </Sidebar>
     </div>
 </template>
 
