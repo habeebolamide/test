@@ -1,657 +1,574 @@
 <template>
-  <div
-    class="sidebar"
-    :class="isOpened ? 'open' : ''"
-    :style="cssVars"
-  >
-    <div
-      class="logo-details"
-      style="margin: 6px 14px 0 14px"
-    >
-      <img
-        v-if="menuLogo"
-        :src="menuLogo"
-        alt="menu-logo"
-        class="menu-logo icon"
-      >
-      <i
-        v-else
-        class="bx icon"
-        :class="menuIcon"
-      />
-      <div class="logo_name">
-        {{ menuTitle }}
-      </div>
-      <i
-        class="bx"
-        :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
-        id="btn"
-        @click="isOpened = !isOpened"
-      />
-    </div>
+  <div>
+    <header id="header" class="header fixed-top d-flex align-items-center">
 
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-grow: 1;
-        max-height: calc(100% - 60px);
-      "
-    >
-      <div
-        id="my-scroll"
-        style="margin: 6px 14px 0 14px"
-      >
-        <ul
-          class="nav-list"
-          style="overflow: visible"
-        >
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="">
+          <span class="d-none d-lg-block">NiceAdmin</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+      </div><!-- End Logo -->
 
-          <li
-            v-for="(menuItem, index) in menuItems"
-            :key="index"
-            :id="'links_' + index"
-          >
-            <router-link
-              v-if="isUsedVueRouter"
-              :to="menuItem.link"
-            >
-              <i
-                class="bx"
-                :class="menuItem.icon || 'bx-square-rounded'"
-              />
-              <span class="links_name">{{ menuItem.name }}</span>
-            </router-link>
-            <a
-              v-else
-              @click.stop.prevent="$emit('menuItemClcked', menuItem.link)"
-              :href="menuItem.link"
-            >
-              <i
-                class="bx"
-                :class="menuItem.icon || 'bx-square-rounded'"
-              />
-              <span class="links_name">{{ menuItem.name }}</span>
+      <div class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+          <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form>
+      </div><!-- End Search Bar -->
+
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+
+          <li class="nav-item d-block d-lg-none">
+            <a class="nav-link nav-icon search-bar-toggle " href="#">
+              <i class="bi bi-search"></i>
             </a>
-            <span
-              :data-target="'links_' + index"
-              class="tooltip"
-            >{{
-              menuItem.tooltip || menuItem.name
-            }}</span>
-          </li>
+          </li><!-- End Search Icon-->
+
+          <li class="nav-item dropdown">
+
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a><!-- End Notification Icon -->
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+              <li class="dropdown-header">
+                You have 4 new notifications
+                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-exclamation-circle text-warning"></i>
+                <div>
+                  <h4>Lorem Ipsum</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>30 min. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-x-circle text-danger"></i>
+                <div>
+                  <h4>Atque rerum nesciunt</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>1 hr. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-check-circle text-success"></i>
+                <div>
+                  <h4>Sit rerum fuga</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>2 hrs. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-info-circle text-primary"></i>
+                <div>
+                  <h4>Dicta reprehenderit</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">Show all notifications</a>
+              </li>
+
+            </ul><!-- End Notification Dropdown Items -->
+
+          </li><!-- End Notification Nav -->
+
+          <li class="nav-item dropdown">
+
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-chat-left-text"></i>
+              <span class="badge bg-success badge-number">3</span>
+            </a><!-- End Messages Icon -->
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+              <li class="dropdown-header">
+                You have 3 new messages
+                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                  <div>
+                    <h4>Maria Hudson</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>4 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                  <div>
+                    <h4>Anna Nelson</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>6 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                  <div>
+                    <h4>David Muldon</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>8 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="dropdown-footer">
+                <a href="#">Show all messages</a>
+              </li>
+
+            </ul><!-- End Messages Dropdown Items -->
+
+          </li><!-- End Messages Nav -->
+
+          <li class="nav-item dropdown pe-3">
+
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+            </a><!-- End Profile Iamge Icon -->
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+              <li class="dropdown-header">
+                <h6>Kevin Anderson</h6>
+                <span>Web Designer</span>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                  <i class="bi bi-person"></i>
+                  <span>My Profile</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                  <i class="bi bi-gear"></i>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                  <i class="bi bi-question-circle"></i>
+                  <span>Need Help?</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Sign Out</span>
+                </a>
+              </li>
+
+            </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
+
         </ul>
-      </div>
-    </div>
+      </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+      <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <i class="bi bi-grid"></i>
+            <span>Dashboard</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="components-alerts.html">
+                <i class="bi bi-circle"></i><span>Alerts</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-accordion.html">
+                <i class="bi bi-circle"></i><span>Accordion</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-badges.html">
+                <i class="bi bi-circle"></i><span>Badges</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-breadcrumbs.html">
+                <i class="bi bi-circle"></i><span>Breadcrumbs</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-buttons.html">
+                <i class="bi bi-circle"></i><span>Buttons</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-cards.html">
+                <i class="bi bi-circle"></i><span>Cards</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-carousel.html">
+                <i class="bi bi-circle"></i><span>Carousel</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-list-group.html">
+                <i class="bi bi-circle"></i><span>List group</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-modal.html">
+                <i class="bi bi-circle"></i><span>Modal</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-tabs.html">
+                <i class="bi bi-circle"></i><span>Tabs</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-pagination.html">
+                <i class="bi bi-circle"></i><span>Pagination</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-progress.html">
+                <i class="bi bi-circle"></i><span>Progress</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-spinners.html">
+                <i class="bi bi-circle"></i><span>Spinners</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-tooltips.html">
+                <i class="bi bi-circle"></i><span>Tooltips</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Components Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="forms-elements.html">
+                <i class="bi bi-circle"></i><span>Form Elements</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms-layouts.html">
+                <i class="bi bi-circle"></i><span>Form Layouts</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms-editors.html">
+                <i class="bi bi-circle"></i><span>Form Editors</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms-validation.html">
+                <i class="bi bi-circle"></i><span>Form Validation</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Forms Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="tables-general.html">
+                <i class="bi bi-circle"></i><span>General Tables</span>
+              </a>
+            </li>
+            <li>
+              <a href="tables-data.html">
+                <i class="bi bi-circle"></i><span>Data Tables</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Tables Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="charts-chartjs.html">
+                <i class="bi bi-circle"></i><span>Chart.js</span>
+              </a>
+            </li>
+            <li>
+              <a href="charts-apexcharts.html">
+                <i class="bi bi-circle"></i><span>ApexCharts</span>
+              </a>
+            </li>
+            <li>
+              <a href="charts-echarts.html">
+                <i class="bi bi-circle"></i><span>ECharts</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Charts Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="icons-bootstrap.html">
+                <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+              </a>
+            </li>
+            <li>
+              <a href="icons-remix.html">
+                <i class="bi bi-circle"></i><span>Remix Icons</span>
+              </a>
+            </li>
+            <li>
+              <a href="icons-boxicons.html">
+                <i class="bi bi-circle"></i><span>Boxicons</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Icons Nav -->
+
+        <li class="nav-heading">Pages</li>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="users-profile.html">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+          </a>
+        </li><!-- End Profile Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-faq.html">
+            <i class="bi bi-question-circle"></i>
+            <span>F.A.Q</span>
+          </a>
+        </li><!-- End F.A.Q Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-contact.html">
+            <i class="bi bi-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li><!-- End Contact Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-register.html">
+            <i class="bi bi-card-list"></i>
+            <span>Register</span>
+          </a>
+        </li><!-- End Register Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-login.html">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Login</span>
+          </a>
+        </li><!-- End Login Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-error-404.html">
+            <i class="bi bi-dash-circle"></i>
+            <span>Error 404</span>
+          </a>
+        </li><!-- End Error 404 Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-blank.html">
+            <i class="bi bi-file-earmark"></i>
+            <span>Blank</span>
+          </a>
+        </li><!-- End Blank Page Nav -->
+
+      </ul>
+
+    </aside>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'SidebarMenuAkahon',
-    props: {
-      //! Menu settings
-      isMenuOpen: {
-        type: Boolean,
-        default: true,
-      },
-      isUsedVueRouter: {
-        type: Boolean,
-        default: false,
-      },
-      menuTitle: {
-        type: String,
-        default: 'Akahon',
-      },
-      menuLogo: {
-        type: String,
-        default: '',
-      },
-      menuIcon: {
-        type: String,
-        default: 'bxl-c-plus-plus',
-      },
-      isPaddingLeft: {
-        type: Boolean,
-        default: true,
-      },
-      menuOpenedPaddingLeftBody: {
-        type: String,
-        default: '250px',
-      },
-      menuClosedPaddingLeftBody: {
-        type: String,
-        default: '78px',
-      },
-
-      //! Menu items
-      menuItems: {
-        type: Array,
-        default: () => [
-          {
-            link: '#',
-            name: 'Dashboard',
-            tooltip: 'Dashboard',
-            icon: 'bx-grid-alt',
-          },
-          {
-            link: '#',
-            name: 'Wallet',
-            tooltip: 'Wallet',
-            icon: 'bx-wallet',
-          },
-          {
-            link: '#',
-            name: 'Employment Management',
-            tooltip: 'Employment Management',
-            icon: 'bx-user',
-          },
-          {
-            link: '#',
-            name: 'Payroll',
-            tooltip: 'Payroll',
-            icon: 'bx-file',
-          },
-          {
-            link: '#',
-            name: 'Compliance',
-            tooltip: 'Compliance',
-            icon: 'bx-file',
-          },
-          {
-            link: '#',
-            name: 'Quick Loan',
-            tooltip: 'Quick Loan',
-            icon: 'bx-donate-heart',
-          },
-          {
-            link: '#',
-            name: 'Book Keeping',
-            tooltip: 'Saved',
-            icon: 'bx-book-open',
-          },
-          {
-            link: '#',
-            name: 'Setting',
-            tooltip: 'Setting',
-            icon: 'bx-cog',
-          },
-        ],
-      },
-
-      //! Search
-      isSearch: {
-        type: Boolean,
-        default: true,
-      },
-      searchPlaceholder: {
-        type: String,
-        default: 'Search...',
-      },
-      searchTooltip: {
-        type: String,
-        default: 'Search',
-      },
-
-      //! Profile detailes
-      profileImg: {
-        type: String,
-        default: '',
-      },
-      profileName: {
-        type: String,
-        default: 'Fayzullo Saidakbarov',
-      },
-      profileRole: {
-        type: String,
-        default: 'Frontend vue developer',
-      },
-      isExitButton: {
-        type: Boolean,
-        default: true,
-      },
-      isLoggedIn: {
-        type: Boolean,
-        default: true,
-      },
-
-      //! Styles
-      bgColor: {
-        type: String,
-        default: '#11101d',
-      },
-      secondaryColor: {
-        type: String,
-        default: '#1d1b31',
-      },
-      homeSectionColor: {
-        type: String,
-        default: '#e4e9f7',
-      },
-      logoTitleColor: {
-        type: String,
-        default: '#fff',
-      },
-      iconsColor: {
-        type: String,
-        default: '#fff',
-      },
-      itemsTooltipColor: {
-        type: String,
-        default: '#e4e9f7',
-      },
-      searchInputTextColor: {
-        type: String,
-        default: '#fff',
-      },
-      menuItemsHoverColor: {
-        type: String,
-        default: '#fff',
-      },
-      menuItemsTextColor: {
-        type: String,
-        default: '#fff',
-      },
-      menuFooterTextColor: {
-        type: String,
-        default: '#fff',
-      },
+import { mapState, mapActions } from 'vuex';
+import isScreen from '../core/screenHelper';
+import NavLink from './NavLink/NavLink';
+export default {
+  name: 'SideBar',
+  components: { NavLink },
+  data() {
+    return {
+      authType: '',
+      menus: {},
+      alerts: [
+        {
+          id: 0,
+          title: 'Sales Report',
+          value: 15,
+          footer: 'Calculating x-axis bias... 65%',
+          color: 'danger',
+        },
+        {
+          id: 1,
+          title: 'Personal Responsibility',
+          value: 20,
+          footer: 'Provide required notes',
+          color: 'primary',
+        },
+      ],
+    };
+  },
+  methods: {
+    ...mapActions('layout', ['changeSidebarActive', 'switchSidebar']),
+    setActiveByRoute() {
+      const paths = this.$route.fullPath.split('/');
+      paths.pop();
+      this.changeSidebarActive(paths.join('/'));
     },
-    data() {
-      return {
-        isOpened: false,
+    sidebarMouseEnter() {
+      if (!this.sidebarStatic && (isScreen('lg') || isScreen('xl'))) {
+        this.switchSidebar(false);
+        this.setActiveByRoute();
       }
     },
-    mounted() {
-      this.isOpened = this.isMenuOpen
-      this.tooltipAttached()
+    sidebarMouseLeave() {
+      if (!this.sidebarStatic && (isScreen('lg') || isScreen('xl'))) {
+        this.switchSidebar(true);
+        this.changeSidebarActive(null);
+      }
     },
-    computed: {
-      cssVars() {
-        return {
-          // '--padding-left-body': this.isOpened ? this.menuOpenedPaddingLeftBody : this.menuClosedPaddingLeftBody,
-          '--bg-color': this.bgColor,
-          '--secondary-color': this.secondaryColor,
-          '--home-section-color': this.homeSectionColor,
-          '--logo-title-color': this.logoTitleColor,
-          '--icons-color': this.iconsColor,
-          '--items-tooltip-color': this.itemsTooltipColor,
-          '--serach-input-text-color': this.searchInputTextColor,
-          '--menu-items-hover-color': this.menuItemsHoverColor,
-          '--menu-items-text-color': this.menuItemsTextColor,
-          '--menu-footer-text-color': this.menuFooterTextColor,
-        }
-      },
-    },
-    watch: {
-      isOpened(val) {
-        window.document.body.style.paddingLeft =
-          this.isOpened && this.isPaddingLeft
-            ? this.menuOpenedPaddingLeftBody
-            : this.menuClosedPaddingLeftBody
-      },
-    },
-    methods: {
-      tooltipAttached() {
-        const tooltips = document.querySelectorAll('.tooltip')
-        tooltips.forEach(tooltip => {
-          document.body.appendChild(tooltip)
-        })
-        document.querySelectorAll('.tooltip').forEach(tooltip => {
-          const targetID = tooltip.dataset.target
-          const target = document.querySelector(`#${targetID}`)
-          if (!target) return
-          target.addEventListener('mouseenter', () => {
-            const targetPosition = target.getBoundingClientRect()
-            if (this.isOpened) return
-            tooltip.style.top = `${targetPosition.top + window.scrollY}px`
-            tooltip.style.left = `${
-              targetPosition.left + targetPosition.width + 20
-            }px`
-            tooltip.classList.add('active')
+
+    getUserType() {
+      const auth_user = JSON.parse(localStorage.getItem('auth_user')) || null;
+      if (auth_user) {
+        this.user_type_hash = auth_user.user_typehash;
+        this.$api
+          .get(this.dynamic_route('user'),
+            {
+            })
+          .then(res => {
+            this.authType = res.data.user_type;
           })
-          target.addEventListener('mouseleave', () => {
-            tooltip.classList.remove('active')
+          .catch(err => {
+            if (err.response.status == 401 && err.response.data.message == "Unauthenticated.") {
+              return this.logoutUser();
+
+            }
           })
-        })
-      },
+          .finally(() => {
+            this.loading = false
+          });
+
+      }
     },
-  }
+  },
+  created() {
+    this.setActiveByRoute();
+    // this.getSidebarCont()
+  },
+  mounted() {
+
+  },
+  computed: {
+    ...mapState('layout', {
+      sidebarStatic: state => state.sidebarStatic,
+      sidebarOpened: state => !state.sidebarClose,
+      activeItem: state => state.sidebarActiveElement,
+    }),
+  },
+};
 </script>
 
-<style>
-  /* Google Font Link */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-  @import url('https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css');
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  body {
-    transition: all 0.5s ease;
-  }
-  .name_job {
-    margin-bottom: 5px;
-  }
-  .menu-logo {
-    width: 30px;
-    margin: 0 10px 0 10px;
-  }
-  .sidebar {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    min-height: min-content;
-    /* overflow-y: auto; */
-    width: 78px;
-    background: var(--bg-color);
-    /* padding: 6px 14px 0 14px; */
-    z-index: 99;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open {
-    width: 250px;
-  }
-  .sidebar .logo-details {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  .sidebar .logo-details .icon {
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-  .sidebar .logo-details .logo_name {
-    color: var(--logo-title-color);
-    font-size: 20px;
-    font-weight: 600;
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open .logo-details .icon,
-  .sidebar.open .logo-details .logo_name {
-    opacity: 1;
-  }
-  .sidebar .logo-details #btn {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    font-size: 22px;
-    transition: all 0.4s ease;
-    font-size: 23px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open .logo-details #btn {
-    text-align: right;
-  }
-  .sidebar i {
-    color: var(--icons-color);
-    height: 60px;
-    min-width: 50px;
-    font-size: 28px;
-    text-align: center;
-    line-height: 60px;
-  }
-  .sidebar .nav-list {
-    margin-top: 20px;
-    /* margin-bottom: 60px; */
-    /* height: 100%; */
-    /* min-height: min-content; */
-  }
-  .sidebar li {
-    position: relative;
-    margin: 8px 0;
-    list-style: none;
-  }
-  .tooltip {
-    position: absolute;
-    /* top: -20px; */
-    /* left: calc(100% + 15px); */
-    z-index: 3;
-    background: var(--items-tooltip-color);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 400;
-    opacity: 0;
-    white-space: nowrap;
-    pointer-events: none;
-    transition: 0s;
-  }
-  .tooltip.active {
-    opacity: 1;
-    pointer-events: auto;
-    transition: all 0.4s ease;
-    /* top: 50%; */
-    transform: translateY(25%);
-  }
-  .sidebar.open li .tooltip {
-    display: none;
-  }
-  .sidebar input {
-    font-size: 15px;
-    color: var(--serach-input-text-color);
-    font-weight: 400;
-    outline: none;
-    height: 50px;
-    width: 100%;
-    width: 50px;
-    border: none;
-    border-radius: 12px;
-    transition: all 0.5s ease;
-    background: var(--secondary-color);
-  }
-  .sidebar.open input {
-    padding: 0 20px 0 50px;
-    width: 100%;
-  }
-  .sidebar .bx-search {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 22px;
-    background: var(--secondary-color);
-    color: var(--icons-color);
-  }
-  .sidebar.open .bx-search:hover {
-    background: var(--secondary-color);
-    color: var(--icons-color);
-  }
-  .sidebar .bx-search:hover {
-    background: var(--menu-items-hover-color);
-    color: var(--bg-color);
-  }
-  .sidebar li a {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    background: var(--bg-color);
-  }
-  .sidebar li a:hover {
-    background: var(--menu-items-hover-color);
-  }
-  .sidebar li a .links_name {
-    color: var(--menu-items-text-color);
-    font-size: 15px;
-    font-weight: 400;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.4s;
-  }
-  .sidebar.open li a .links_name {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .sidebar li a:hover .links_name,
-  .sidebar li a:hover i {
-    transition: all 0.5s ease;
-    color: var(--bg-color);
-  }
-  .sidebar li router-link {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    background: var(--bg-color);
-  }
-  .sidebar li router-link:hover {
-    background: var(--menu-items-hover-color);
-  }
-  .sidebar li router-link .links_name {
-    color: var(--menu-items-text-color);
-    font-size: 15px;
-    font-weight: 400;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.4s;
-  }
-  .sidebar.open li router-link .links_name {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .sidebar li router-link:hover .links_name,
-  .sidebar li router-link:hover i {
-    transition: all 0.5s ease;
-    color: var(--bg-color);
-  }
-  .sidebar li i {
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
-    border-radius: 12px;
-  }
-  .sidebar div.profile {
-    position: relative;
-    height: 60px;
-    width: 78px;
-    /* left: 0;
-    bottom: 0; */
-    padding: 10px 14px;
-    background: var(--secondary-color);
-    transition: all 0.5s ease;
-    overflow: hidden;
-  }
-  .sidebar.open div.profile {
-    width: 250px;
-  }
-  .sidebar div .profile-details {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  .sidebar div img {
-    height: 45px;
-    width: 45px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-right: 10px;
-  }
-  .sidebar div.profile .name,
-  .sidebar div.profile .job {
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--menu-footer-text-color);
-    white-space: nowrap;
-  }
-  .sidebar div.profile .job {
-    font-size: 12px;
-  }
-  .sidebar .profile #log_out {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background: var(--secondary-color);
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 0px;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open .profile #log_out {
-    width: 50px;
-    background: var(--secondary-color);
-    opacity: 0;
-  }
-  .sidebar.open .profile:hover #log_out {
-    opacity: 1;
-  }
-  .sidebar.open .profile #log_out:hover {
-    opacity: 1;
-    color: red;
-  }
-  .sidebar .profile #log_out:hover {
-    color: red;
-  }
-  .home-section {
-    position: relative;
-    background: var(--home-section-color);
-    min-height: 100vh;
-    top: 0;
-    left: 78px;
-    width: calc(100% - 78px);
-    transition: all 0.5s ease;
-    z-index: 2;
-  }
-  .sidebar.open ~ .home-section {
-    left: 250px;
-    width: calc(100% - 250px);
-  }
-  .home-section .text {
-    display: inline-block;
-    color: var(--bg-color);
-    font-size: 25px;
-    font-weight: 500;
-    margin: 18px;
-  }
-  .my-scroll-active {
-    overflow-y: auto;
-  }
-  #my-scroll {
-    overflow-y: auto;
-    height: calc(100% - 60px);
-  }
-  #my-scroll::-webkit-scrollbar {
-    display: none;
-    /* background-color: rgba(255, 255, 255, 0.2); 
-    width: 10px;
-    border-radius:5px  */
-  }
-  /* #my-scroll::-webkit-scrollbar-thumb{
-    background-color: red;
-    border-radius:5px 
-  }
-  #my-scroll::-webkit-scrollbar-button:vertical:start:decrement{
-    display:none;
-  }
-  #my-scroll::-webkit-scrollbar-button:vertical:end:increment{
-    display:none;
-  } */
-  @media (max-width: 420px) {
-    .sidebar li .tooltip {
-      display: none;
-    }
-  }
+<!-- Sidebar styles should be scoped -->
+<!-- <style src="./Sidebar.scss" lang="scss" scoped/> -->
+<style src="./Sidebar.scss" lang="scss" scoped></style>
+<style src="../../../assets/css/styles.css" scoped></style>
+<style scoped>
+.sidebarStatic .logo {
+  width: fit-content;
+}
+
+.logo {
+  text-align: left !important;
+  padding: 1px 15px 15px 15px !important;
+  margin: 0px;
+}
 </style>
