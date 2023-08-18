@@ -61,19 +61,19 @@
                     <div class="card-body py-5">
                         <!-- <h5 class="card-title">
                             Reports <span>/Today</span></h5> -->
-                            <div class="row">
-                                <div class="col-4">
-                                    <small class="intxt">Inflow</small>
-                                    <h1 class="in">N1,562,552</h1>
-                                </div>
-                                <div class="col-4">
-                                    <small class="outtxt">Outflow</small>
-                                    <h1 class="out">N1,562,552</h1>
-                                </div>
-                                <div class="col-4" style="float: right;">
-                                    <small>Inflow/Outlaw <i class="bi bi-chevron-compact-down"></i></small>
-                                </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <small class="intxt">Inflow</small>
+                                <h1 class="in">N1,562,552</h1>
                             </div>
+                            <div class="col-4">
+                                <small class="outtxt">Outflow</small>
+                                <h1 class="out">N1,562,552</h1>
+                            </div>
+                            <div class="col-4" style="float: right;">
+                                <small>Inflow/Outlaw <i class="bi bi-chevron-compact-down"></i></small>
+                            </div>
+                        </div>
                         <div id="reportsChart" class="container"></div>
                         <button class="btn date">2022</button>
                     </div>
@@ -88,6 +88,159 @@
                 <button class="btn filter ml-3 mt-1">
                     <small> <i class="bi bi-sliders2-vertical"></i> filter</small>
                 </button>
+                <div class="card mt-4 staff">
+                    <div class="card-body ">
+                        <div class="wed pt-4">
+                            <h5>Wednesday, November 09, 2022</h5>
+                            <div class="card radius">
+                                <div class="card-body px-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td class="emphead">Payroll</td>
+                                                <td class="emphead">Activity</td>
+                                                <td class="emphead">Employee</td>
+                                                <td class="emphead">Time</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="all">
+                                                <td>
+                                                    <span class="d-flex pt-2">
+                                                        <span>
+                                                            <span class="b-avatar rounded-circle badge-success"
+                                                                style="width: 38px; height: 38px; font-weight: 600">
+                                                                BM
+                                                            </span>
+                                                        </span>
+                                                        <span class="ml-3">
+                                                            <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td class="pt-3">Paid November 2022 salary</td>
+                                                <td class="pt-3">52</td>
+                                                <td class="pt-3">16:15</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <div class="wed">
+                            <div class="card radius">
+                                <div class="card-body px-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td class="emphead">Payroll</td>
+                                                <td class="emphead">Activity</td>
+                                                <td class="emphead">Employee</td>
+                                                <td class="emphead">Time</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="all">
+                                                <td>
+                                                    <span class="d-flex pt-2">
+                                                        <span>
+                                                            <span class="b-avatar rounded-circle badge-success"
+                                                                style="width: 38px; height: 38px; font-weight: 600">
+                                                                BM
+                                                            </span>
+                                                        </span>
+                                                        <span class="ml-3">
+                                                            <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td class="pt-3">Paid November 2022 salary</td>
+                                                <td class="pt-3">52</td>
+                                                <td class="pt-3">16:15</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body ">
+                        <div class="wed pt-4">
+                            <h5>Friday, November 04, 2022</h5>
+                            <div class="card radius">
+                                <div class="card-body px-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td class="emphead">Bonus</td>
+                                                <td class="emphead">Activity</td>
+                                                <td class="emphead">Bonus Name</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="all">
+                                                <td>
+                                                    <span class="d-flex pt-2">
+                                                        <span>
+                                                            <span class="b-avatar rounded-circle badge-success"
+                                                                style="width: 38px; height: 38px; font-weight: 600">
+                                                                BM
+                                                            </span>
+                                                        </span>
+                                                        <span class="ml-3">
+                                                            <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td class="pt-3">Added new bonus</td>
+                                                <td class="pt-3">52</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <div class="wed">
+                            <div class="card radius">
+                                <div class="card-body px-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td class="emphead">Wallet</td>
+                                                <td class="emphead">Activity</td>
+                                                <td class="emphead">Amount</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="all">
+                                                <td>
+                                                    <span class="d-flex pt-2">
+                                                        <span>
+                                                            <span class="b-avatar rounded-circle badge-success"
+                                                                style="width: 38px; height: 38px; font-weight: 600">
+                                                                BM
+                                                            </span>
+                                                        </span>
+                                                        <span class="ml-3">
+                                                            <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td class="pt-3">Paid November 2022 salary</td>
+                                                <td class="pt-3 amount">N11,1678,900.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </Sidebar>
     </div>
@@ -95,26 +248,58 @@
 
 
 <style scoped>
+.amount{
+    color:  #EA4E4B !important;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
+.radius{
+    border-radius: 16px !important;
+}
+.emphead{
+    color: var(--new-styles-text-body-normal, #8D8E8D);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+}
+.all td{
+    color: var(--new-styles-text-body-dark, #515251);
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+.staff {
+    border-radius: 20px;
+    background: rgba(242, 241, 241, 0.50);
+}
 
 /*Clearing Floats*/
-.cf:before, .cf:after{
-    content:"";
-    display:table;
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
 }
 
-.cf:after{
-    clear:both;
+.cf:after {
+    clear: both;
 }
 
-.cf{
-    zoom:1;
-}    
+.cf {
+    zoom: 1;
+}
+
 /* Form wrapper styling */
 
 .search-wrapper {
     width: 90%;
     border-radius: 40px;
-    border: 1px solid  #B5B6B5;
+    border: 1px solid #B5B6B5;
     background: #fff;
     display: inline-block;
 }
@@ -135,15 +320,15 @@
 .search-wrapper input:focus {
     outline: 0;
     background: #fff;
-    box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8) inset;
 }
 
 .search-wrapper ::placeholder {
-   color: #999;
-   font-weight: normal;
-   padding-left: 20px;
-   padding-top: 20px;
-} 
+    color: #999;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-top: 20px;
+}
 
 /* Form submit button */
 .search-wrapper button {
@@ -160,29 +345,31 @@
     text-transform: uppercase;
     background: #D9EBCD;
     border-radius: 0px 40px 40px 0px;
-    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-}  
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+}
 
-.search-wrapper button:hover{    
-/*     background: #e54040; */
-}  
+.search-wrapper button:hover {
+    /*     background: #e54040; */
+}
 
 .search-wrapper button:active,
-.search-wrapper button:focus{  
+.search-wrapper button:focus {
     background: #198cff;
-    outline: 0;  
+    outline: 0;
 }
 
 .search-wrapper button:focus:before,
-.search-wrapper button:active:before{
-        border-right-color: #c42f2f;
-}     
+.search-wrapper button:active:before {
+    border-right-color: #c42f2f;
+}
 
-.search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+.search-wrapper button::-moz-focus-inner {
+    /* remove extra button spacing for Mozilla Firefox */
     border: 0;
     padding: 0;
-}   
-.date{
+}
+
+.date {
     width: 80px;
     padding: 10px 16px;
     background: #11453B;
@@ -190,6 +377,7 @@
     color: white;
     border-radius: 0px;
 }
+
 .smalltxt {
     font-size: 16px;
     color: #515251;
@@ -260,29 +448,33 @@
     text-align: center;
     padding-top: 10px;
 }
-.in{
+
+.in {
     color: #219653;
     font-family: 'Poppins';
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
-    line-height: 36px; 
+    line-height: 36px;
 }
-.out{
+
+.out {
     color: #EF4444;
     font-family: 'Poppins';
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
-    line-height: 36px; 
+    line-height: 36px;
 }
-.filter{
+
+.filter {
     border-radius: 16px;
     border: 1px solid #B5B6B5;
     background: #FFF;
     color: #8D8E8D;
 }
-.filter:hover{
+
+.filter:hover {
     border-radius: 16px;
     border: 1px solid #B5B6B5;
     background: #FFF;
