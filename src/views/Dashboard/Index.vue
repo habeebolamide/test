@@ -7,7 +7,7 @@
 
                 <div class="amt container">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-9">
                             <div class="amtbg py-5 px-3">
                                 <p class="text-light" style="font-family:'Poppins', sans-serif;">Wallet Balance</p>
                                 <h3 class="balance">12,560,078.00</h3> <i class="bi bi-eye eye"></i>
@@ -52,7 +52,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4"></div>
+                        <div class="col-md-3">
+                            <div class="card overall">
+                                <div class="card-title heading">
+                                    <p class="s">Next Payroll</p>
+                                </div>
+                                <div class="card-body side">
+                                    <div class="cent">
+                                        <span class="ic"><i class="bi bi-calendar-date"></i> Friday</span>
+                                        <p class="pt-2 dates">09/11/2022</p>
+                                    </div>
+                                </div>
+                                <h5 style="border-bottom: 1px solid #E7E8E7; width: 188px;"></h5>
+                                <div class="omo px-2">
+                                    <h2 class="tots">Total Employee</h2>
+                                    <h1>64</h1>
+                                    <div class="colored-line"></div>
+                                    <p class="gender">Male <br> 32 </p>
+                                    <p class="gender" style="float: right;">Female <br> 32</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -88,159 +108,173 @@
                 <button class="btn filter ml-3 mt-1">
                     <small> <i class="bi bi-sliders2-vertical"></i> filter</small>
                 </button>
-                <div class="card mt-4 staff">
-                    <div class="card-body ">
-                        <div class="wed pt-4">
-                            <h5>Wednesday, November 09, 2022</h5>
-                            <div class="card radius">
-                                <div class="card-body px-3">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <td class="emphead">Payroll</td>
-                                                <td class="emphead">Activity</td>
-                                                <td class="emphead">Employee</td>
-                                                <td class="emphead">Time</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="all">
-                                                <td>
-                                                    <span class="d-flex pt-2">
-                                                        <span>
-                                                            <span class="b-avatar rounded-circle badge-success"
-                                                                style="width: 38px; height: 38px; font-weight: 600">
-                                                                BM
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mt-4 staff">
+                            <div class="card-body ">
+                                <div class="wed pt-4">
+                                    <h5>Wednesday, November 09, 2022</h5>
+                                    <div class="card radius">
+                                        <div class="card-body px-3">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="emphead">Payroll</td>
+                                                        <td class="emphead">Activity</td>
+                                                        <td class="emphead">Employee</td>
+                                                        <td class="emphead">Time</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="all">
+                                                        <td>
+                                                            <span class="d-flex pt-2">
+                                                                <span>
+                                                                    <span class="b-avatar rounded-circle badge-success"
+                                                                        style="width: 38px; height: 38px; font-weight: 600">
+                                                                        BM
+                                                                    </span>
+                                                                </span>
+                                                                <span class="ml-3">
+                                                                    <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
+                                                                </span>
                                                             </span>
-                                                        </span>
-                                                        <span class="ml-3">
-                                                            <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
-                                                        </span>
-                                                    </span>
-                                                </td>
-                                                <td class="pt-3">Paid November 2022 salary</td>
-                                                <td class="pt-3">52</td>
-                                                <td class="pt-3">16:15</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body ">
-                        <div class="wed">
-                            <div class="card radius">
-                                <div class="card-body px-3">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <td class="emphead">Payroll</td>
-                                                <td class="emphead">Activity</td>
-                                                <td class="emphead">Employee</td>
-                                                <td class="emphead">Time</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="all">
-                                                <td>
-                                                    <span class="d-flex pt-2">
-                                                        <span>
-                                                            <span class="b-avatar rounded-circle badge-success"
-                                                                style="width: 38px; height: 38px; font-weight: 600">
-                                                                BM
-                                                            </span>
-                                                        </span>
-                                                        <span class="ml-3">
-                                                            <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
-                                                        </span>
-                                                    </span>
-                                                </td>
-                                                <td class="pt-3">Paid November 2022 salary</td>
-                                                <td class="pt-3">52</td>
-                                                <td class="pt-3">16:15</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                                        </td>
+                                                        <td class="pt-3">Paid November 2022 salary</td>
+                                                        <td class="pt-3">52</td>
+                                                        <td class="pt-3">16:15</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </div>
 
-                    <div class="card-body ">
-                        <div class="wed pt-4">
-                            <h5>Friday, November 04, 2022</h5>
-                            <div class="card radius">
-                                <div class="card-body px-3">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <td class="emphead">Bonus</td>
-                                                <td class="emphead">Activity</td>
-                                                <td class="emphead">Bonus Name</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="all">
-                                                <td>
-                                                    <span class="d-flex pt-2">
-                                                        <span>
-                                                            <span class="b-avatar rounded-circle badge-success"
-                                                                style="width: 38px; height: 38px; font-weight: 600">
-                                                                BM
-                                                            </span>
-                                                        </span>
-                                                        <span class="ml-3">
-                                                            <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
-                                                        </span>
-                                                    </span>
-                                                </td>
-                                                <td class="pt-3">Added new bonus</td>
-                                                <td class="pt-3">52</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card-body ">
-                        <div class="wed">
-                            <div class="card radius">
-                                <div class="card-body px-3">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <td class="emphead">Wallet</td>
-                                                <td class="emphead">Activity</td>
-                                                <td class="emphead">Amount</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="all">
-                                                <td>
-                                                    <span class="d-flex pt-2">
-                                                        <span>
-                                                            <span class="b-avatar rounded-circle badge-success"
-                                                                style="width: 38px; height: 38px; font-weight: 600">
-                                                                BM
+                            <div class="card-body ">
+                                <div class="wed">
+                                    <div class="card radius">
+                                        <div class="card-body px-3">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="emphead">Payroll</td>
+                                                        <td class="emphead">Activity</td>
+                                                        <td class="emphead">Employee</td>
+                                                        <td class="emphead">Time</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="all">
+                                                        <td>
+                                                            <span class="d-flex pt-2">
+                                                                <span>
+                                                                    <span class="b-avatar rounded-circle badge-success"
+                                                                        style="width: 38px; height: 38px; font-weight: 600">
+                                                                        BM
+                                                                    </span>
+                                                                </span>
+                                                                <span class="ml-3">
+                                                                    <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
+                                                                </span>
                                                             </span>
-                                                        </span>
-                                                        <span class="ml-3">
-                                                            <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
-                                                        </span>
-                                                    </span>
-                                                </td>
-                                                <td class="pt-3">Paid November 2022 salary</td>
-                                                <td class="pt-3 amount">N11,1678,900.00</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                        </td>
+                                                        <td class="pt-3">Paid November 2022 salary</td>
+                                                        <td class="pt-3">52</td>
+                                                        <td class="pt-3">16:15</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body ">
+                                <div class="wed pt-4">
+                                    <h5>Friday, November 04, 2022</h5>
+                                    <div class="card radius">
+                                        <div class="card-body px-3">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="emphead">Bonus</td>
+                                                        <td class="emphead">Activity</td>
+                                                        <td class="emphead">Bonus Name</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="all">
+                                                        <td>
+                                                            <span class="d-flex pt-2">
+                                                                <span>
+                                                                    <span class="b-avatar rounded-circle badge-success"
+                                                                        style="width: 38px; height: 38px; font-weight: 600">
+                                                                        BM
+                                                                    </span>
+                                                                </span>
+                                                                <span class="ml-3">
+                                                                    <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
+                                                                </span>
+                                                            </span>
+                                                        </td>
+                                                        <td class="pt-3">Added new bonus</td>
+                                                        <td class="pt-3">52</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body ">
+                                <div class="wed">
+                                    <div class="card radius">
+                                        <div class="card-body px-3">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="emphead">Wallet</td>
+                                                        <td class="emphead">Activity</td>
+                                                        <td class="emphead">Amount</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="all">
+                                                        <td>
+                                                            <span class="d-flex pt-2">
+                                                                <span>
+                                                                    <span class="b-avatar rounded-circle badge-success"
+                                                                        style="width: 38px; height: 38px; font-weight: 600">
+                                                                        BM
+                                                                    </span>
+                                                                </span>
+                                                                <span class="ml-3">
+                                                                    <span class="fw-semi-bold">&nbsp; Badmus Kemis</span>
+                                                                </span>
+                                                            </span>
+                                                        </td>
+                                                        <td class="pt-3">Paid November 2022 salary</td>
+                                                        <td class="pt-3 amount">N11,1678,900.00</td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
         </Sidebar>
     </div>
@@ -248,32 +282,121 @@
 
 
 <style scoped>
-.amount{
-    color:  #EA4E4B !important;
+.gender{
+    color:  #8D8E8D;
+    font-family: 'Poppins';
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 12px;  */
+    display: inline-block;
+}
+/* .gender1{
+    color:  #8D8E8D;
+    font-family: 'Poppins';
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    float: right;
+     line-height: 12px;
+} */
+.cent{
+    align-items: center !important;
+    text-align: center !important;
+}
+.tots{
+    color: #515251;
+    font-family: Aeonik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    text-align: left  !important;
+}
+  .colored-line {
+    width: 95%;
+    height: 10px;
+    background: linear-gradient(to right, #11453B 50%, #EA4E4B 50%);
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+.dates{
+    color: #515251;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.ic{
+    color: var(--new-styles-text-body-dark, #515251);
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; 
+}
+.ic i {
+    font-size: 14px;
+}
+.overall{
+    width: 200px;
+    /* padding: 0px 16px 16px 16px; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+    border-radius: 24px;
+    border: 1px solid var(--new-styles-grays-outline, #E7E8E7);
+    background: var(--new-styles-shades-white, #FFF);
+
+    /* Elevations/Light Mode/Light 2 */
+    box-shadow: 0px 6px 12px 0px rgba(170, 170, 170, 0.11);
+}
+.heading{
+    /* border-radius: 16px 16px 0px 0px; */
+    background: #D9EBCD;
+    width: 200px;
+    height: 50px;
+    border-radius: 24px 24px 0px 0px;
+    box-shadow: 0px 9px 18px 0px rgba(170, 170, 170, 0.15);
+}
+.s{
+    text-align: center;
+    font-size: 16px;
+    padding-top: 0px;
+}
+.amount {
+    color: #EA4E4B !important;
     font-family: 'Poppins';
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
+    /* 150% */
 }
-.radius{
+
+.radius {
     border-radius: 16px !important;
 }
-.emphead{
+
+.emphead {
     color: var(--new-styles-text-body-normal, #8D8E8D);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
+    /* 133.333% */
 }
-.all td{
+
+.all td {
     color: var(--new-styles-text-body-dark, #515251);
     font-family: 'Poppins';
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; 
+    line-height: 24px;
 }
+
 .staff {
     border-radius: 20px;
     background: rgba(242, 241, 241, 0.50);
