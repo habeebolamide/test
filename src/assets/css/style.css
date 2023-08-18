@@ -641,6 +641,7 @@
     .toggle-sidebar .sidebar {
       left: 0;
     }
+
   }
   
   @media (min-width: 1200px) {
@@ -653,6 +654,7 @@
     .toggle-sidebar .sidebar {
       left: -300px;
     }
+
   }
   
   .sidebar-nav {

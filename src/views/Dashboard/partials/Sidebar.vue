@@ -3,7 +3,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
       <div class="d-flex align-items-center justify-content-between">
-        <i class="bi bi-list toggle-sidebar-btn" @click="click()"></i>
+        <i class="bi bi-list toggle-sidebar-btn" @click="toggleSidebar()"></i>
         <img src="../../../assets/logo2.png" class="img-fluid px-5" alt="">
       </div><!-- End Logo -->
 
@@ -378,6 +378,20 @@
   </div>
 </template>
 
+
+<style scoped>
+.sidebarStatic .logo {
+  width: fit-content;
+}
+
+.logo {
+  text-align: left !important;
+  padding: 1px 15px 15px 15px !important;
+  margin: 0px;
+}
+</style>
+<script src="../../../assets/js/main.js"></script>
+<style src="../../../assets/css/styles.css" scoped></style>
 <script>
 export default {
   name: 'SideBar',
@@ -403,38 +417,15 @@ export default {
       ],
     };
   },
-  methods: {
-    click() {
+  methods:{
+    toggleSidebar(){
       document.getElementById('body').classList.toggle('toggle-sidebar');
+      // document.getElem
+    }
+  },
+  mounted(){
+    // document.getElementById('body').classList.add('toggle-sidebar');
 
-    },
-  },
-
-  created() {
-  },
-  mounted() {
-    // this.setupSidebarToggle();
-  },
-  computed: {
-  },
+  }
 };
 </script>
-<script src="../../../assets/js/main.js"></script>
-
-<!-- Sidebar styles should be scoped -->
-<!-- <style src="./Sidebar.scss" lang="scss" scoped/> -->
-<style src="../../../assets/css/styles.css" scoped></style>
-<!-- <script src="../../../assets/js/main.js"></script> -->
-
-<style scoped>
-.sidebarStatic .logo {
-  width: fit-content;
-}
-
-.logo {
-  text-align: left !important;
-  padding: 1px 15px 15px 15px !important;
-  margin: 0px;
-}
-</style>
-

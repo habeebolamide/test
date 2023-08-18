@@ -627,7 +627,7 @@
 <script src="../../../assets/js/main.js"></script>
 
 <script>
-import Sidebar from './partials/Sidebar.vue';
+import Sidebar from './partials/SideBar.vue';
 import ApexCharts from 'apexcharts';
 export default {
     name: "DashBoard",
