@@ -390,7 +390,6 @@
   margin: 0px;
 }
 </style>
-<script src="../../../assets/js/main.js"></script>
 <style src="../../../assets/css/styles.css" scoped></style>
 <script>
 export default {
@@ -430,7 +429,7 @@ export default {
         document.getElementById("header").style.width = '100%';
         document.getElementById("header").style.marginLeft = '0px';
       }
-      
+
     }
   },
   mounted(){
