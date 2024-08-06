@@ -84,7 +84,8 @@
 
             </ul><!-- End Notification Dropdown Items -->
 
-          </li><!-- End Notification Nav -->
+          </li>
+          <!-- End Notification Nav -->
 
 
           <li class="nav-item pe-3">
@@ -418,10 +419,11 @@ export default {
   },
   methods:{
     toggleSidebar(){
-
       if (document.getElementById('body').classList.contains("toggle-sidebar")) {
-        document.getElementById("header").style.width = '80%';
-        document.getElementById("header").style.marginLeft = '302px';
+        if (screen.width > 1178) {
+          document.getElementById("header").style.width = '80%';
+          document.getElementById("header").style.marginLeft = '300px';
+        }
         document.getElementById('body').classList.toggle('toggle-sidebar');
       }
       else {
@@ -433,8 +435,16 @@ export default {
     }
   },
   mounted(){
-    // document.getElementById('body').classList.add('toggle-sidebar');
-
+    if (document.getElementById('body').classList.contains("toggle-sidebar")) {
+        document.getElementById("header").style.width = '80%';
+        document.getElementById("header").style.marginLeft = '302px';
+        document.getElementById('body').classList.toggle('toggle-sidebar');
+      }
+      else {
+        document.getElementById('body').classList.toggle('toggle-sidebar');
+        document.getElementById("header").style.width = '100%';
+        document.getElementById("header").style.marginLeft = '0px';
+      }
   }
 };
 </script>

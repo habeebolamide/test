@@ -124,7 +124,7 @@
                             can help.</h5>
                     </div>
                     <div class="col-md-6">
-                        <div class="vuetify-card bootstrap-card">
+                        <div class="vuetify-card bootstrap-card card">
                             <div class="card-body">
                                 <h2 class="card-title">First things first</h2>
                                 <p class="card-text">We want to serve you better. Tell us a bit <br>
@@ -178,7 +178,6 @@
                                                 <div class="form-group">
                                                     <input class="form-control tabform mb-3" type="text" placeholder="Job Title" >
                                                 </div>
-
                                                 <div class="form-group">
                                                     <input class="form-control tabform mb-3" type="text" placeholder="Company Size" >
                                                 </div>
@@ -566,6 +565,14 @@ footer {
     background: #11453B;
     color: white;
     padding: 12px 28px;
+}
+.tabbtn:hover{
+    border-radius: 50px;
+    background: #11453B;
+    color: white;
+    padding: 12px 28px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: 0.5xs;
 }
 @media screen and (max-width: 768px) {
     .register{
