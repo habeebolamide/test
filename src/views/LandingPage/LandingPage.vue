@@ -37,7 +37,12 @@
                                 class="sec">seconds</span></h1>
                         <p class="text-muted pt-3">We’ve built an all-inclusive simple solution for individual and
                             businesses to manage staff, pay salaries, bills, and relevant taxes all at once.</p>
-                        <button class="btn freebtn">Start Using Free, Forever</button>
+                        <router-link to="/dashboard">
+                            <button class="btn freebtn">
+                                    Start Using Free, Forever
+                            </button>
+                        </router-link>
+
                         <div class="download-section">
                             <p class="text-dark">Download the Eazipay App</p>
                             <div class="d-flex flex-row">
